@@ -20,14 +20,14 @@
     Parser = Parser + 1;
   }
   document.getElementById('target-id').innerHTML = Output;
-  file = fopen("WordsWritten.csv", 3);
+  const fs = require('fs');
   if(flength(file) == 0)
   {
-    fwrite(file, Input);
+    fs.writeFile(file, Input);
   }
   else
   {
-    fwrite(file, "," + Input);
+    fs.writeFile(file, "," + Input);
   }
   </script>
   <p>
