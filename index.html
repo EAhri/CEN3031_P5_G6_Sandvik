@@ -20,6 +20,15 @@
     Parser = Parser + 1;
   }
   document.getElementById('target-id').innerHTML = Output;
+  file = fopen("WordsWritten.csv", 3);
+  if(flength(file) == 0)
+  {
+    fwrite(file, Input);
+  }
+  else
+  {
+    fwrite(file, "," + Input);
+  }
   </script>
   <p>
     This is a paragraph.
