@@ -20,11 +20,15 @@
     Parser = Parser + 1;
   }
   document.getElementById('target-id').innerHTML = Output;
-  const fs = require('fs');
-  fs.writeFile(file, Input + ",", (err) =>
+  function WritetoFile(FilePath, Data)
   {
-    if (err) throw err;
-  })
+    const fs = require('fs');
+    fs.writeFile(FilePath, Data, (err) =>
+    {
+        if (err) throw err;
+    });
+  }
+  WritetoFile("WordsWritten.txt", Input + ",");
   </script>
   <p>
     This is a paragraph.
