@@ -1,1 +1,23 @@
-<h1>Hello!</h1>
+<!DOCTYPE HTML>
+<html>
+<body></body>
+<script>
+//Vector Defined
+var shopItems = [] // Adding items to the vector
+shopItems.push("Cornflakes");
+shopItems.push("Toothbrush");
+shopItems.push("Chicken");
+shopItems.push("Detergent");
+shopItems.push("Bread");
+//Print Total Shopping Items
+console.log("Shopping List : ",shopItems);
+console.log("Capacity : ",shopItems.length);
+//Removing latest added item
+shopItems.pop()
+console.log("New Shopping List : ",shopItems);
+console.log("Capacity : ",shopItems.length);
+//Representing as a single string value without double quotes
+console.log(" ");
+console.log("Final Shopping List - ",shopItems.join());
+</script>
+</html>
