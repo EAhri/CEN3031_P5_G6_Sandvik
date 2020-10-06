@@ -7,6 +7,20 @@
 </head>
 <body>
   <h1>Level One Headline</h1>
+  <div id ="target-id"></div>
+  <script>
+  var ItemsAdded = [];
+  var Input = window.prompt("Enter a word!");
+  ItemsAdded.push(Input);
+  var Output = "All words inputted so far:" + "\n";
+  var Parser = 0;
+  while (Parser < ItemsAdded.length)
+  {
+    Output = Output + "\n" + ItemsAdded[Parser];
+    Parser = Parser + 1;
+  }
+  document.getElementById('target-id').innerHTML = Output;
+  </script>
   <p>
     This is a paragraph.
     Note that the text is automatically wrapped.
