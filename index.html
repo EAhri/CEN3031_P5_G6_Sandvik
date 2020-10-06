@@ -21,14 +21,10 @@
   }
   document.getElementById('target-id').innerHTML = Output;
   const fs = require('fs');
-  if(flength(file) == 0)
+  fs.writeFile(file, Input + ",", (err) =>
   {
-    fs.writeFile(file, Input);
-  }
-  else
-  {
-    fs.writeFile(file, "," + Input);
-  }
+    if (err) throw err;
+  })
   </script>
   <p>
     This is a paragraph.
